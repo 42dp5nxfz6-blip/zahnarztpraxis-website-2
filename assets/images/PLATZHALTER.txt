@@ -1,0 +1,14 @@
+Bilder-Ordner
+=============
+
+Lege hier deine Bilder ab und verlinke sie im HTML, z. B.:
+
+  assets/images/logo.svg        -> Logo im Header & Footer
+  assets/images/team.jpg        -> Foto im Bereich "Über uns"
+  assets/images/praxis-1.jpg    -> Galerie-Bild 1
+  assets/images/praxis-2.jpg    -> Galerie-Bild 2
+  ...
+  assets/images/og-bild.jpg     -> Vorschaubild beim Teilen (Open Graph)
+
+Empfehlung: Bilder vor dem Hochladen komprimieren (z. B. als WebP/JPG),
+damit die Seite schnell lädt.

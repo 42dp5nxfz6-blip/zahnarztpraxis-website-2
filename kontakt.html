@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Kontakt &amp; Termin – Zahnarztpraxis [PRAXISNAME]</title>
+	<meta name="description" content="Termin anfragen, Öffnungszeiten und Anfahrt der Zahnarztpraxis [PRAXISNAME] in [STADT]." />
+	<meta name="theme-color" content="#5b7d76" />
+	<link rel="stylesheet" href="css/styles.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+	<div class="scroll-progress" aria-hidden="true"></div>
+	<header class="site-header" id="top">
+		<div class="container header-inner">
+			<a href="index.html" class="logo" aria-label="Zur Startseite"><span class="logo-mark" aria-hidden="true">✦</span><span class="logo-text">[PRAXISNAME]</span></a>
+			<nav class="main-nav" id="main-nav" aria-label="Hauptnavigation">
+				<a href="index.html">Start</a>
+				<a href="ueber-uns.html">Über uns</a>
+				<a href="leistungen.html">Leistungen</a>
+				<a href="galerie.html">Galerie</a>
+				<a href="kontakt.html" aria-current="page">Kontakt</a>
+				<a href="kontakt.html" class="btn btn-primary nav-cta">Termin anfragen</a>
+			</nav>
+			<button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
+		</div>
+	</header>
+
+	<main>
+		<section class="page-hero">
+			<div class="container">
+				<p class="eyebrow" data-animate="fade-up">Kontakt</p>
+				<h1 data-animate="fade-up" data-delay="1">Termin anfragen</h1>
+				<p class="lead" data-animate="fade-up" data-delay="2">Füllen Sie das Formular aus – wir melden uns zeitnah zur Terminbestätigung.</p>
+			</div>
+		</section>
+
+		<section class="section contact">
+			<div class="container split">
+				<div class="split-text" data-animate="fade-right">
+					<div class="info-block">
+						<h3>Öffnungszeiten</h3>
+						<!-- ÖFFNUNGSZEITEN-PLATZHALTER -->
+						<dl class="hours">
+							<div><dt>Mo – Do</dt><dd>08:00 – 18:00 Uhr</dd></div>
+							<div><dt>Freitag</dt><dd>08:00 – 14:00 Uhr</dd></div>
+							<div><dt>Sa – So</dt><dd>geschlossen</dd></div>
+						</dl>
+					</div>
+					<div class="info-block">
+						<h3>So erreichen Sie uns</h3>
+						<!-- ADRESS-/KONTAKT-PLATZHALTER -->
+						<address>
+							Zahnarztpraxis [PRAXISNAME]<br />
+							[Straße und Hausnummer]<br />
+							[PLZ] [STADT]<br />
+							Tel.: <a href="tel:+49000000000">[Telefonnummer]</a><br />
+							E-Mail: <a href="mailto:[E-MAIL-ADRESSE]">[E-MAIL-ADRESSE]</a>
+						</address>
+					</div>
+					<!-- KARTE (optional): Google-Maps-Embed hier einfügen -->
+				</div>
+
+				<div class="split-form" data-animate="fade-left">
+					<!-- ============================================================ -->
+					<!-- TERMINFORMULAR über FORMSPREE                                 -->
+					<!-- 1) Kostenloses Konto auf https://formspree.io anlegen        -->
+					<!-- 2) Neues Formular erstellen → du erhältst eine Endpoint-URL  -->
+					<!--    der Form: https://formspree.io/f/abcdwxyz                  -->
+					<!-- 3) Die ID unten im action-Attribut ersetzen                  -->
+					<!-- ============================================================ -->
+					<form id="appointment-form" class="form"
+						action="https://formspree.io/f/DEINE_FORMSPREE_ID"
+						method="POST" novalidate>
+
+						<!-- Betreff der E-Mail (optional anpassbar) -->
+						<input type="hidden" name="_subject" value="Neue Terminanfrage über die Website" />
+
+						<div class="field">
+							<label for="name">Name<span aria-hidden="true">*</span></label>
+							<input type="text" id="name" name="name" autocomplete="name" required />
+						</div>
+						<div class="field-row">
+							<div class="field">
+								<label for="email">E-Mail<span aria-hidden="true">*</span></label>
+								<!-- name="email" sorgt dafür, dass Formspree direkt antworten kann -->
+								<input type="email" id="email" name="email" autocomplete="email" required />
+							</div>
+							<div class="field">
+								<label for="phone">Telefon</label>
+								<input type="tel" id="phone" name="phone" autocomplete="tel" />
+							</div>
+						</div>
+						<div class="field-row">
+							<div class="field">
+								<label for="date">Wunschtermin</label>
+								<input type="date" id="date" name="wunschtermin" />
+							</div>
+							<div class="field">
+								<label for="time">Wunschuhrzeit</label>
+								<input type="time" id="time" name="wunschuhrzeit" />
+							</div>
+						</div>
+						<div class="field">
+							<label for="message">Nachricht</label>
+							<textarea id="message" name="message" rows="4" placeholder="Wie können wir Ihnen helfen?"></textarea>
+						</div>
+						<div class="field field-check">
+							<input type="checkbox" id="privacy" name="datenschutz_akzeptiert" required />
+							<label for="privacy">Ich habe die <a href="datenschutz.html">Datenschutzhinweise</a> gelesen und stimme der Verarbeitung meiner Daten zu.<span aria-hidden="true">*</span></label>
+						</div>
+
+						<!-- Honeypot gegen Spam (von Formspree unterstützt) -->
+						<input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+						<button type="submit" class="btn btn-primary btn-lg btn-block">Anfrage senden</button>
+						<p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+					</form>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container footer-inner">
+			<div class="footer-brand"><span class="logo-text">[PRAXISNAME]</span><p>Moderne Zahnmedizin in [STADT].</p></div>
+			<nav class="footer-nav" aria-label="Footer-Navigation"><a href="ueber-uns.html">Über uns</a><a href="leistungen.html">Leistungen</a><a href="kontakt.html">Kontakt</a><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></nav>
+			<div class="footer-social" aria-label="Soziale Netzwerke"><a href="#" aria-label="Instagram">Instagram</a><a href="#" aria-label="Facebook">Facebook</a></div>
+		</div>
+		<div class="container"><p class="copyright">&copy; <span data-year></span> Zahnarztpraxis [PRAXISNAME]. Alle Rechte vorbehalten.</p></div>
+	</footer>
+	<script src="js/script.js" defer></script>
+</body>
+</html>
