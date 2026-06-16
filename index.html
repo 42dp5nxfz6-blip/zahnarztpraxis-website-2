@@ -214,12 +214,12 @@
 				<div class="split-form">
 					<!-- =================================================== -->
 					<!-- KONTAKTFORMULAR                                      -->
-					<!-- Hinweis: Reine HTML-Formulare können keine E-Mail    -->
-					<!-- direkt versenden. Diese Variante öffnet das          -->
-					<!-- E-Mail-Programm des Besuchers (mailto) per JavaScript.-->
-					<!-- Für serverseitigen Versand siehe README.txt.         -->
+					<!-- Dieses Formular sendet die Anfrage direkt über       -->
+					<!-- Formspree. Tragen Sie Ihre Endpoint-URL in action ein. -->
 					<!-- =================================================== -->
-					<form id="appointment-form" class="form" novalidate>
+					<form id="appointment-form" class="form" action="https://formspree.io/f/xdavydow" method="POST" novalidate>
+						<input type="hidden" name="_subject" value="Neue Terminanfrage über die Website" />
+						<input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
 						<div class="field">
 							<label for="name">Name<span aria-hidden="true">*</span></label>
 							<input type="text" id="name" name="name" autocomplete="name" required />
